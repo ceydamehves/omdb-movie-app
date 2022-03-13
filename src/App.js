@@ -1,26 +1,41 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import './App.css';
-import Movies from './components/Movies';
 import {omdb} from './api/secret';
+import Movies from './components/Movies';
+import Search from './components/Search';
 
 function App() {
 
-  const [movieTitles, setMovieTitles] = useState([])
-  const getMovieInfo =  async() => {
-    const url = (`http://www.omdbapi.com/?s=harry potter&apikey=` + omdb)
+  const [movieTitles, setMovieTitles] = useState([])  
+  const [searchMovies, setSearchMovies] = useState('')
+
+  const getMovieInfo =  async (searchMovies) => {
+    const url = (`http://www.omdbapi.com/?s=${searchMovies}&apikey=${omdb}`)
     const res = await fetch(url)
     const resJsonData = await res.json()
-    setMovieTitles(resJsonData.Search) //took only search array
+
+    if (resJsonData.Search)
+    {
+      setMovieTitles(resJsonData.Search) //took only search array
+    }    
   }  
 
   useEffect(() => {
-    getMovieInfo()
-  }, [])
+    getMovieInfo(searchMovies)
+  }, [searchMovies])
+
 
   return (
     <div className="App">
-      <Movies movieTitles = {movieTitles} />
+      <div>
+        <Search searchMovies={searchMovies} setSearchMovies={setSearchMovies}/>
+      </div>
+     
+      <div>
+        <Movies movieTitles = {movieTitles} />
+      </div>
+      
     </div>
   );
 }
