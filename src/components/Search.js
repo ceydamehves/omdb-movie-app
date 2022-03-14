@@ -7,13 +7,13 @@ const Search = (props) => {
 	return (
 		<div>
                 <input 
-                    className = 'form-control' 
+                    className = 'search-input' 
                     placeholder = 'search'            
                     value = {props.value}
                     onChange={(event) => setCurrentValue(event.target.value)}/>
-                    <div>
-                    <button onClick={(event) => props.setSearchMovies('')}>Clear</button>
-                    <button onClick={(event) => props.setSearchMovies(currentValue)}>Search</button>
+                    <div className='buttons-container'>
+                        <button className='button-clear' onClick={(event) => props.setSearchMovies('')}>clear</button>
+                        <button className='button-search' onClick={(event) => props.setSearchMovies(currentValue)}>search</button>
                     </div>
             
         </div>

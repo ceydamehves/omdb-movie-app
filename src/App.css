@@ -1,18 +1,100 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-
+body {  
+  background-color: rgb(249, 250, 251);
+  display: flex;
+  justify-content: center;
+	align-items: center;
+}
 .App {
   margin: auto;
-  width: 50%;
-  border: 3px solid green;
-  padding: 10px;
+  width: 100%;
 }
 
-.h1 {
-  font-family: 'Poppins';
+.emoji {
+  margin-left: 5px;
+  height: 14px;
+  width: 10px;
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
   font-size: 32px;
 }
 
-.h3 {
-  font-family: 'Poppins';
+.subtitle {
+  font-family: 'Poppins', sans-serif;
   font-size: 16px;
 }
+
+.search-section {
+  width: 521px;
+  height: 152px;
+  padding: 0px 10px 0px 10px;
+  border: 1px solid rgb(200, 200, 200, 0.3);
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+}
+
+.search-input {
+  width: 99%;
+  height: 25px;
+  border: 1px solid rgb(200, 200, 200, 0.4);
+}
+
+.buttons-container {
+  margin: 10px 0px 5px 0px;
+  text-align: right;
+}
+
+.button-search {
+  padding: 8px;
+  width: 90px;
+  height: 40px;
+  color: rgb(249, 250, 251);
+  font-weight: bold;
+  font-size: 16px;  
+  background-color: rgb(80, 184, 60);
+  border-radius: 32px;
+  border-color: transparent;
+  text-align: center;
+}
+
+.button-clear {
+  color: rgb(80, 184, 60);
+  font-weight: bold;
+  font-size: 16px;  
+  width: 80px;
+  height: 40px;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.results-section {
+  margin-top: 30px;
+  padding: 0px 10px 0px 10px;
+  border: 1px solid rgb(200, 200, 200, 0.3);
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  width: 521px;
+  height: auto;
+}
+
+.title-results {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.subtitle-results {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+.movies {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+

@@ -17,7 +17,7 @@ function App() {
 
     if (resJsonData.Search)
     {
-      setMovieTitles(resJsonData.Search) //took only search array
+      setMovieTitles(resJsonData.Search)
     }    
   }  
 
@@ -25,17 +25,26 @@ function App() {
     getMovieInfo(searchMovies)
   }, [searchMovies])
 
+  const popcorn = require('./assets/popcorn.png')
 
   return (
     <div className="App">
-      <div>
-        <Search searchMovies={searchMovies} setSearchMovies={setSearchMovies}/>
+      <div className='center'>
+        <h1 className='title'>OMDb API</h1>
+        <p className='subtitle'>The Open Movie Database 
+          <img className='emoji' src = {popcorn}/></p>        
       </div>
-     
-      <div>
+      <div className='search-section'>
+        <h3 className='subtitle'>Movie title</h3>
+        <Search searchMovies={searchMovies} setSearchMovies={setSearchMovies}/>        
+      </div>     
+      <div className='results-section'>
+        {searchMovies != '' ?
+        <h3 className='title-results'>Results for "search"
+        <p className='subtitle-results'>click on  a movie title to learn about it.</p></h3> :
+        <h3 className='title-results'>Search results will appear here</h3> }
         <Movies movieTitles = {movieTitles} />
-      </div>
-      
+      </div>   
     </div>
   );
 }

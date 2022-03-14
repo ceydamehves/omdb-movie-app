@@ -4,7 +4,7 @@ const Movies = (props) => {
 	return (
 		<>
 			{props.movieTitles.map((movie, index) => (				
-					<div>{movie["Title"]}</div>			
+					<div key={index} className='movies'> {movie["Title"]} </div>			
 			))}
 		</>
 	);
