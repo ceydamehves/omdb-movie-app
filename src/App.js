@@ -28,8 +28,9 @@ function App() {
   const popcorn = require('./assets/popcorn.png')
 
   return (
-    <div className="App">
-      <div className='center'>
+    
+    <div className='center'>
+      <div>
         <h1 className='title'>OMDb API</h1>
         <p className='subtitle'>The Open Movie Database 
           <img className='emoji' src = {popcorn}/></p>        
@@ -46,6 +47,7 @@ function App() {
         <Movies movieTitles = {movieTitles} />
       </div>   
     </div>
+  
   );
 }
 

@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 body {  
   background-color: rgb(249, 250, 251);
-  display: flex;
+}
+
+.center {
+  display: block;
+  margin: 10% 25% 0% 25%;
   justify-content: center;
 	align-items: center;
-}
-.App {
-  margin: auto;
-  width: 100%;
 }
 
 .emoji {
@@ -27,8 +27,8 @@ body {
 }
 
 .search-section {
-  width: 521px;
-  height: 152px;
+  width: 80%;
+  height: 40%;
   padding: 0px 10px 0px 10px;
   border: 1px solid rgb(200, 200, 200, 0.3);
   border-radius: 8px;
@@ -48,8 +48,8 @@ body {
 
 .button-search {
   padding: 8px;
-  width: 90px;
-  height: 40px;
+  width: 18%;
+  height: 8%;
   color: rgb(249, 250, 251);
   font-weight: bold;
   font-size: 16px;  
@@ -63,8 +63,8 @@ body {
   color: rgb(80, 184, 60);
   font-weight: bold;
   font-size: 16px;  
-  width: 80px;
-  height: 40px;
+  width: 16%;
+  height: 8%;
   background-color: transparent;
   border-color: transparent;
 }
@@ -75,7 +75,7 @@ body {
   border: 1px solid rgb(200, 200, 200, 0.3);
   border-radius: 8px;
   background-color: rgb(255, 255, 255);
-  width: 521px;
+  width: 80%;
   height: auto;
 }
 
